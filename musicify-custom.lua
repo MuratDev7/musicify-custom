@@ -1,4 +1,4 @@
-local indexURL = "https://raw.githubusercontent.com/RubenHetKonijn/computronics-songs/main/index.json?cb=" .. os.epoch("utc")
+local indexURL = "https://raw.githubusercontent.com/MuratDev7/computronics-songs/master/index.json?cb=" .. os.epoch("utc")
 local version = 0.041
 
 
