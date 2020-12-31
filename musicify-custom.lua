@@ -99,7 +99,7 @@ elseif args[1] == "play" then
   tape.setSpeed(index.songs[playID].speed)
   tape.play()
 end
-elseif args[2] == "customindex"
+elseif args[2] == "customindex" then
   if tonumber(args[3]) <= 0 then
     print("You need to provide a custom index.json link")
     return
