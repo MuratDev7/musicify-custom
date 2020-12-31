@@ -46,6 +46,7 @@ if args[1] == "help" then
   print("musicify play <id> -- Plays the specified song")
   print("musicify play shuffle -- Starts shuffle mode")
   print("musicify stop -- Stops playback")
+  print("musicify customindex <link> -- Binds to a custom index.json file")
 elseif args[1] == "stop" then
   print("Stopping playback")
   tape.stop()
@@ -97,4 +98,11 @@ elseif args[1] == "play" then
 
   tape.setSpeed(index.songs[playID].speed)
   tape.play()
+end
+elseif args[2] == "customindex"
+  if tonumber(args[3]) <= 0 then
+    print("You need to provide a custom index.json link")
+    return
+  end
+  indexURL = args[3]
 end
