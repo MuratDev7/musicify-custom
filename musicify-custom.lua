@@ -105,4 +105,12 @@ elseif args[2] == "customindex"
     return
   end
   indexURL = args[3]
+  local handle = http.get(indexURL)
+  local indexJSON = handle.readAll()
+  handle.close()
+  local index = textutils.unserialiseJSON(indexJSON)
+  if not index then
+    print("The index seems to be malformed, make an issue on github or dm RubenKnijn#0043 on Discord")
+    return
+  end
 end
